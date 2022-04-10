@@ -1,16 +1,8 @@
 import React from 'react';
-import MenuItem from './MenuItem';
 
-const MenuWrapper = (hasFocusedChild) => {
-  console.log(hasFocusedChild);
+const MenuWrapper = ({hasFocusedChild}) => {
   return (
-    <div className={hasFocusedChild ? 'menu-wrapper-test' : 'menu-wrapper'}>
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-      <MenuItem />
-    </div>
+    <div className={hasFocusedChild ? 'menu-wrapper-test' : 'menu-wrapper'} />
   );
 }
 

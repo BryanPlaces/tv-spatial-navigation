@@ -1,9 +1,15 @@
-.container {
+@import './content.scss';
+@import './assets.scss';
+
+.app-container {
   background-color: #221c35;
   width: 1440px;
   height: 810px;
   display: flex;
   flex-direction: row;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .global {
@@ -24,7 +30,7 @@
   margin-bottom: 37px;
 }
 
-.menu-item-test {
+.menu-item-focus {
   width: 171px;
   height: 51px;
   background-color: #b056ed;

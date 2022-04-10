@@ -6,13 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import store from './store/store';
 import { createRoot } from 'react-dom/client';
-import { init } from '@noriginmedia/norigin-spatial-navigation';
 import './styles/styles.scss';
-
-init({
-  debug: false,
-  visualDebug: false
-});
 
 const root = createRoot(document.getElementById('root'));
 

@@ -1,0 +1,40 @@
+.asset-wrapper {
+  margin-right: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.asset-box {
+  width: 225px;
+  height: 127px;
+  background-color: 'white';
+  border-color: white;
+  border-style: solid;
+  border-width: 0;
+  box-sizing: border-box;
+  border-radius: 7px;
+
+}
+.asset-box-focus {
+  border-width: 6px;
+}
+
+.asset-color-1 {
+  background-color:#714ADD;
+}
+
+.asset-color-2 {
+  background-color: #AB8DFF;
+}
+
+.asset-color-3 {
+  background-color: #512EB0;
+}
+
+.asset-title {
+  color: white;
+  margin-top: 10px;
+  font-family: 'Segoe UI';
+  font-size: 24px;
+  font-weight: 400;
+}

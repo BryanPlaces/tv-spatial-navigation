@@ -1,11 +1,21 @@
 import React, { useEffect } from 'react';
 
 import MenuWrapper from './MenuWrapper';
-
+import MenuItem from './MenuItem';
 import { useFocusable, FocusContext } from '@noriginmedia/norigin-spatial-navigation';
 
 const Navbar = ({ focusKey: focusKeyParam }) => {
-  const { ref, focusSelf, hasFocusedChild, focusKey } = useFocusable({
+  const {
+    ref,
+    focusSelf,
+    hasFocusedChild,
+    focusKey
+    // setFocus, -- to set focus manually to some focusKey
+    // navigateByDirection, -- to manually navigate by direction
+    // pause, -- to pause all navigation events
+    // resume, -- to resume all navigation events
+    // updateAllLayouts -- to force update all layouts when needed
+  } = useFocusable({
     focusable: true,
     saveLastFocusedChild: false,
     trackChildren: true,
@@ -24,11 +34,16 @@ const Navbar = ({ focusKey: focusKeyParam }) => {
   useEffect(() => {
     focusSelf();
   }, [focusSelf]);
-  console.log(ref);
+
   return (
     <FocusContext.Provider value={focusKey}>
-      <MenuWrapper ref={ref} hasFocusedChild={hasFocusedChild}>
-      </MenuWrapper>
+      <div ref={ref} className={hasFocusedChild ? 'menu-wrapper-test' : 'menu-wrapper'}>
+        <MenuItem />
+        <MenuItem />
+        <MenuItem />
+        <MenuItem />
+        <MenuItem />
+      </div>
     </FocusContext.Provider>
   );
 }
